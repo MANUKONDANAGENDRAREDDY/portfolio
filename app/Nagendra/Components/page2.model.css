@@ -1,0 +1,87 @@
+.mySwiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.navButton {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.navButton:hover {
+  background-color: #f0f0f0;
+}
+
+.activeSlide {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.inactiveSlide {
+  transform: scale(0.9);
+  opacity: 0.7;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+/* .swiperSlide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: none;
+}
+
+.activeSlide {
+  transform: scale(1);
+  opacity: 1;
+  z-index: 15;
+}
+
+.inactiveSlide {
+  transform: scale(0.9);
+  opacity: 0.4;
+  filter: blur(1px);
+}
+
+.navButton {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 335px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.navButton:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.imageContainer {
+  width: 285px;
+  height: 278px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid rgb(228, 226, 226);
+}
+
+.activeText {
+  opacity: 1;
+  text-align: center;
+  color: rgb(118, 38, 38);
+  font-weight: bold;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hiddenText {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+} */
