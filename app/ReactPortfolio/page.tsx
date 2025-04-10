@@ -108,17 +108,19 @@ export default function page() {
   };
 
   useEffect(() => {
-    const sr = ScrollReveal({
-      distance: "500px",
-      duration: 1500,
-      delay: 400,
-      reset: true,
-    });
+    if (typeof window !== "undefined") {
+      const sr = ScrollReveal({
+        distance: "500px",
+        duration: 1500,
+        delay: 400,
+        reset: true,
+      });
 
-    sr.reveal(".reveal", { origin: "bottom" });
-    sr.reveal(".reveal-left", { origin: "left" });
-    sr.reveal(".reveal-right", { origin: "right" });
-    sr.reveal(".reveal-top", { origin: "top" });
+      sr.reveal(".reveal", { origin: "bottom" });
+      sr.reveal(".reveal-left", { origin: "left" });
+      sr.reveal(".reveal-right", { origin: "right" });
+      sr.reveal(".reveal-top", { origin: "top" });
+    }
   }, []);
 
   return (
