@@ -20,6 +20,25 @@ interface Errors {
 
 export default function page() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    const userPref = window.matchMedia("(prefers-color-scheme: dark)");
+    const savedTheme = localStorage.getItem("theme");
+
+    const systemTheme = userPref.matches ? "dark" : "light";
+    const currentTheme = savedTheme || systemTheme;
+
+    setTheme(currentTheme);
+    document.documentElement.classList.toggle("dark", currentTheme === "dark");
+  }, []);
+
+  // const toggleTheme = () => {
+  //   const newTheme = theme === "dark" ? "light" : "dark";
+  //   setTheme(newTheme);
+  //   localStorage.setItem("theme", newTheme);
+  //   document.documentElement.classList.toggle("dark", newTheme === "dark");
+  // };
 
   const [formData, setFormData] = useState<FormData>({
     fullName: "",
@@ -104,7 +123,7 @@ export default function page() {
 
   return (
     <div
-      className="min-h-screen bg-center bg-[length:70%] bg-opacity-10"
+      className="min-h-screen bg-center bg-[length:70%] bg-opacity-10 bg-white dark:bg-[#121212] text-black dark:text-white transition-colors duration-300"
       style={{
         backgroundImage: "url('/images/Background image.png')",
       }}
@@ -167,13 +186,13 @@ export default function page() {
       >
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-4">
-            <h2 className="lg:text-5xl reveal-top">
+            <h2 className="lg:text-5xl reveal-top dark:text-white text-black">
               Hi,<span className="text-green-600">Myself</span>
             </h2>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-green-600 reveal-left ">
               <span>NAGENDRA REDDY MANUKONDA</span>
             </h1>
-            <h3 className="text-xl md:text-2xl reveal-left">
+            <h3 className="text-xl md:text-2xl reveal-left dark:text-white text-black">
               And I&apos;m a{" "}
               <span className="text-green-600 ">Frontend Developer</span>
             </h3>
@@ -212,21 +231,21 @@ export default function page() {
                   alt="instagram"
                   width={100}
                   height={50}
-                  className="size-12"
+                  className="size-12 "
                 />
               </a>
               <a
                 href="https://x.com/nagendrareddy44?s=21"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:scale-110 transition-transform"
+                className="hover:scale-110 transition-transform "
               >
                 <Image
                   src="/images/twitter (1).png"
                   alt="twitter"
                   width={100}
                   height={50}
-                  className="size-12"
+                  className="size-12 bg-white rounded-md"
                 />
               </a>
               <a
@@ -261,8 +280,8 @@ export default function page() {
               alt="Profile"
               width={400}
               height={300}
-              className="w-8rem h-1rem  object-contain rounded-full mx-auto bg-gray-50
-                shadow-[0px_9px_12px_rgba(255,0,134,0.815),0px_6px_12px_rgba(245,121,5,0.83),6px_0px_15px_rgb(5,247,247)]"
+              className="w-8rem h-1rem  object-contain rounded-full mx-auto bg-gray-50 dark:bg-black dark:brightness-50 brightness-100
+              shadow-[0px_9px_12px_rgba(255,0,134,0.815),0px_6px_12px_rgba(245,121,5,0.83),6px_0px_15px_rgb(5,247,247)]"
             />
           </div>
         </div>
@@ -273,7 +292,7 @@ export default function page() {
         className="py-20 px-4 md:px-8 lg:px-16 lg:mt-40 reveal-top"
       >
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-9 pb-2 border-b-2 border-green-600 reveal-left">
+          <h2 className="text-4xl font-bold mb-9 pb-2 border-b-2 border-green-600 reveal-left dark:text-white text-black">
             About <span className="text-green-600">Me</span>
           </h2>
           <p className="text-gray-700 mb-8 text-xl reveal-left">
@@ -286,7 +305,7 @@ export default function page() {
           </p>
 
           <div className="space-y-8 reveal-left">
-            <h3 className="text-3xl font-bold pb-2 border-b-2 border-green-600 reveal-left">
+            <h3 className="text-3xl font-bold pb-2 border-b-2 border-green-600 reveal-left dark:text-white text-black">
               Education
             </h3>
 
@@ -309,8 +328,12 @@ export default function page() {
                 },
               ].map((edu, index) => (
                 <div key={index} className="pl-4 border-l-4 border-gray-200">
-                  <p className="font-bold">{edu.location}</p>
-                  <p className="text-lg">{edu.degree}</p>
+                  <p className="font-bold dark:text-white text-black">
+                    {edu.location}
+                  </p>
+                  <p className="text-lg dark:text-white text-black">
+                    {edu.degree}
+                  </p>
                   <p className="text-gray-600 italic">{edu.institution}</p>
                 </div>
               ))}
@@ -324,7 +347,7 @@ export default function page() {
         className=" py-20 px-4 md:px-8 lg:px-16 lg:mt-44 reveal"
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 pb-2 border-b-2 border-green-600 reveal-top">
+          <h2 className="text-4xl font-bold text-center mb-12 pb-2 border-b-2 border-green-600 dark:text-white text-black reveal-top">
             My <span className="text-green-600 text-4xl">Services</span>
           </h2>
 
@@ -354,7 +377,7 @@ export default function page() {
                 className=" relative bg-white p-6 rounded-lg overflow-hidden shadow-lg hover:transform hover:-translate-y-2 transition-all duration-300
                   hover:shadow-[0px_4px_6px_rgba(255,0,234,0.815),0px_6px_12px_rgba(255,72,0,0.83),6px_0px_15px_rgb(5,247,247)]"
               >
-                <h3 className=" text-xl font-bold mb-4 flex justify-center align-middle reveal-top">
+                <h3 className=" text-xl font-bold mb-4 flex justify-center text-black align-middle reveal-top">
                   {service.title}
                 </h3>
                 <Image
@@ -362,7 +385,7 @@ export default function page() {
                   alt={service.title}
                   width={400}
                   height={300}
-                  className="w-50% h-48 object-contain rounded-lg transition-all duration-500 hover:opacity-0 reveal"
+                  className="w-50% h-48 object-contain rounded-lg transition-all  duration-500 hover:opacity-0 reveal"
                 />
                 <div
                   className="absolute inset-0 bg-white flex flex-col justify-center items-center p-6 
@@ -425,7 +448,7 @@ export default function page() {
             ].map((skill, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-lg transition-colors
+                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-colors
                   hover:transform hover:-translate-y-2 duration-300 hover:shadow-green-600 reveal-left"
               >
                 <Image
@@ -435,7 +458,7 @@ export default function page() {
                   height={64}
                   className="w-20 h-20 mx-auto mb-4 hover:scale-125 transition-transform"
                 />
-                <h3 className="text-center text-xl font-semibold reveal">
+                <h3 className="text-center text-xl font-semibold reveal text-black">
                   {skill.name}
                 </h3>
               </div>
@@ -449,7 +472,7 @@ export default function page() {
         className=" py-20 px-4 md:px-8 lg:px-16 lg:mt-44 reveal"
       >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 pb-2 border-b-2 border-green-600 reveal-top">
+          <h2 className="text-3xl font-bold text-center mb-12 pb-2 border-b-2 border-green-600 dark:text-white text-black reveal-top">
             LATEST <span className="text-green-600">PROJECT</span>
           </h2>
 
@@ -513,14 +536,14 @@ export default function page() {
         className="py-20 px-4 md:px-8 lg:px-16 lg:mt-44 reveal"
       >
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 pb-2 border-b-2 border-green-600 reveal-top">
+          <h2 className="text-3xl font-bold text-center mb-12 pb-2 border-b-2 border-green-600 dark:text-white text-black reveal-top">
             CONTACT <span className="text-green-600">ME</span>
           </h2>
 
           <form className="space-y-6 reveal-left" onSubmit={handleSubmit}>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="reveal-left">
-                <label className="font-semibold">
+                <label className="font-semibold dark:text-white text-black">
                   Full Name <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -538,7 +561,7 @@ export default function page() {
                 )}
               </div>
               <div className="reveal-right">
-                <label className="font-semibold">
+                <label className="font-semibold dark:text-white text-black">
                   Email Address <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -555,10 +578,9 @@ export default function page() {
                 )}
               </div>
             </div>
-
             <div className="grid md:grid-cols-2 gap-6">
               <div className="reveal-left">
-                <label className="font-semibold">
+                <label className="font-semibold dark:text-white text-black">
                   Phone Number <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -577,7 +599,9 @@ export default function page() {
                 )}
               </div>
               <div className="reveal-right">
-                <label className="font-semibold">Email Subject</label>
+                <label className="font-semibold dark:text-white text-black">
+                  Email Subject
+                </label>
                 <input
                   type="text"
                   name="subject"
@@ -590,7 +614,9 @@ export default function page() {
             </div>
 
             <div className="reveal-left">
-              <label className="font-semibold">Message</label>
+              <label className="font-semibold dark:text-white text-black">
+                Message
+              </label>
               <textarea
                 name="message"
                 placeholder="Message"
