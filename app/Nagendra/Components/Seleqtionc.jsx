@@ -62,7 +62,7 @@ function Seleqtionc() {
 
   return (
     <div
-      className=" w-[390px] h-[902px] lg:w-[1520px] lg:h-[820px] lg:top-[1430px] bg-cover bg-center bg-no-repeat bg-[#8D6346] bg-opacity-8"
+      className=" w-100vw h-[902px] lg:w-100vw lg:h-[820px] lg:top-[1430px] bg-cover bg-center bg-no-repeat bg-[#8D6346] bg-opacity-8"
       style={{ backgroundImage: "url('/images/Pattern-02 1 (1).png')" }}
     >
       <div className=" font-[Jost]  text-[26px] h-[78px] xss:mx-9 xss:text-center text-white justify-center items-center flex xss:flex-col">
@@ -141,7 +141,7 @@ function Seleqtionc() {
                   <img
                     src={item.image}
                     alt={`item ${index + 1}`}
-                    className="lg:w-full lg:h-auto w-[290px] tab:w-full tab:h-fit h-48 object-cover "
+                    className="lg:w-full lg:h-fit w-[290px] tab:w-full tab:h-fit h-48 object-cover "
                   />
 
                   <div

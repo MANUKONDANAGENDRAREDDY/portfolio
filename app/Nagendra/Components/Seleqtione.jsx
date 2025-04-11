@@ -43,7 +43,7 @@ function Seleqtione() {
   ];
 
   return (
-    <div className="w-[640px] h-[914px] lg:w-[1520px] lg:h-[820px] lg:top-24 tab:mx-16 tab:my-20 xss:my-20 my-20 ">
+    <div className="w-100vw h-100vh lg:w-100vw lg:h-100vh lg:top-24 tab:mx-16 tab:my-20 xss:my-20 my-20 ">
       <div className=" font-[Jost] text-[30px] h-[59px] leading-7  xss:text-center  flex-col tab:my-4 xss:my-5 lg:top-[96px] text-center items-center align-middle flex xss:flex-col  ">
         <h1 className="font-normal xss:mx-20 xss:mb-14 leading-7 text-amber-800 tracking-[0.3em] ">
           FIND YOUR NEXT {"  "}

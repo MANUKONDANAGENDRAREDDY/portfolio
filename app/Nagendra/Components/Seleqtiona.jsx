@@ -70,7 +70,7 @@ function Seleqtiona() {
   };
 
   return (
-    <div className="w-[1520px] h-[720px] bg-amber-700 p-8">
+    <div className="w-100vw h-100vh bg-amber-700 p-8 left-0  ">
       <div className="grid grid-cols-3 gap-[0.5px] max-w-6xl mx-auto">
         {menuItems.map((item, index) => (
           <div

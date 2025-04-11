@@ -41,7 +41,7 @@ function Seleqtiond() {
   ];
 
   return (
-    <div className="w-[1520px] xss:w-[640px] xss:h-[886px]  py-12">
+    <div className="w-100vw xss:w-[640px] xss:h-[886px]  py-12">
       <div className="text-center xss:w-[587.49px] xss:h-[117px] xss:gap-3 font-[Jost] ">
         <h1 className="text-3xl font-bold text-amber-800 xss:leading-7 xss:tracking-[0.2em] xss:-mr-14 xss:mt-14 xss:mb-3 tracking-wide">
           HANDPICKED OFFERS
@@ -72,8 +72,8 @@ function Seleqtiond() {
 
         <div className="relative w-[1,879px] h-[531px] gap-20 mt-12 px-8">
           <Swiper
-            spaceBetween={50}
-            slidesPerView={3.5}
+            spaceBetween={10}
+            slidesPerView={3.6}
             loop={true}
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
@@ -102,7 +102,7 @@ function Seleqtiond() {
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-[390px] h-60 mt-4 xss:w-[400px] xss:h-[276px] object-cover"
+                      className="w-[390px] h-60vh mt-4 xss:w-[400px] xss:h-[276px] object-cover"
                     />
                     <div className="h4 absolute left-28 top-2 pb-2 bg-white px-6 py-1 mt-[8.3px] x text-xs font-bold text-gray-700 ">
                       VALID TILL 30TH DECEMBER 2024

@@ -17,7 +17,7 @@ function Seleqtionb() {
       title: "THE TEA GARDEN",
       description:
         "An experience first hand what goes in to making some of the worlds finest teas guided personally by us in a tea estate...>>",
-      image: "/images/Group 1000006303(1).png",
+      image: "/images/Group 1000006303 (1).png",
     },
     {
       id: 1,
@@ -31,14 +31,14 @@ function Seleqtionb() {
       title: ".",
       description:
         "An experience first hand what goes in to making some of the worlds finest teas guided personally by us in a tea estate...",
-      image: "/images/Frame 1000009605 (3).png",
+      image: "/images/Group 1000006303(3).png",
     },
     {
       id: 3,
       title: "",
       description:
         "An experience first hand what goes in to making some of the worlds finest teas guided personally by us in a tea estate...",
-      image: "/images/Group 1000006304(4).png",
+      image: "/images/Frame 1000009605 (4,).png",
     },
     {
       id: 4,
@@ -50,7 +50,7 @@ function Seleqtionb() {
   ];
 
   return (
-    <div className="w-[1520px] h-[1000px] py-12 px-5 text-center ">
+    <div className="w-100vw h-100vh py-12 px-5 text-center ">
       <h1 className="text-gray-700 font-thin text-xl tracking-widest mb-1">
         SELEQTIONS <span className="font-bold text-gray-500">EXPERIENCES</span>
       </h1>
