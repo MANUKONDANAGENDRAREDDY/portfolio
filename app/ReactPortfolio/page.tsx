@@ -195,7 +195,7 @@ export default function page() {
               <span>NAGENDRA REDDY MANUKONDA</span>
             </h1>
             <h3 className="text-xl md:text-2xl reveal-left dark:text-white text-black">
-              And I&apos;m a{" "}
+              And I'm a{" "}
               <span className="text-green-600 ">Frontend Developer</span>
             </h3>
             <p className="text-gray-600 text-xl reveal-left">
