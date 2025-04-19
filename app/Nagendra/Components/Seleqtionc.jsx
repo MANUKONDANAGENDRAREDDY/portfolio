@@ -47,18 +47,17 @@ function Seleqtionc() {
       image: "/images/Mask group (3).png",
     },
   ];
+  const handleNext = () => {
+    if (swiperRef.current) {
+      swiperRef.current.slideNext();
+    }
+  };
 
-  // const handleNext = () => {
-  //   if (swiperRef.current) {
-  //     swiperRef.current.slideNext();
-  //   }
-  // };
-
-  // const handlePrev = () => {
-  //   if (swiperRef.current) {
-  //     swiperRef.current.slidePrev();
-  //   }
-  // };
+  const handlePrev = () => {
+    if (swiperRef.current) {
+      swiperRef.current.slidePrev();
+    }
+  };
 
   return (
     <div

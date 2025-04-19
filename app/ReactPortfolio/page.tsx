@@ -17,7 +17,6 @@ interface Errors {
   email?: string;
   phone?: string;
 }
-
 export default function page() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [theme, setTheme] = useState("light");
@@ -247,7 +246,7 @@ export default function page() {
                   alt="twitter"
                   width={100}
                   height={50}
-                  className="size-12 bg-white rounded-md"
+                  className="size-12 bg-white -p-6 rounded-md"
                 />
               </a>
               <a
@@ -264,10 +263,25 @@ export default function page() {
                   className="size-12"
                 />
               </a>
+              <a
+                href="https://github.com/MANUKONDANAGENDRAREDDY/portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:scale-110 transition-transform"
+              >
+                <Image
+                  src="/images/icons8-github-50.png"
+                  alt="github"
+                  width={120}
+                  height={70}
+                  className="size-12 bg-white rounded-md"
+                />
+              </a>
             </div>
 
             <a
               href="/images/Nagendra-Frontend developer-resume.pdf"
+              download
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-[#80ff80] hover:bg-[#3ffdb1] text-black px-8 py-3 rounded-full transition-colors reveal-left"
@@ -282,7 +296,7 @@ export default function page() {
               alt="Profile"
               width={400}
               height={300}
-              className="w-8rem h-1rem  object-contain rounded-full mx-auto bg-gray-50 dark:bg-black dark:brightness-50 brightness-100
+              className="w-8rem h-1rem  object-contain rounded-full mx-auto bg-gray-50 dark:bg-black dark:brightness-75 brightness-100
               shadow-[0px_9px_12px_rgba(255,0,134,0.815),0px_6px_12px_rgba(245,121,5,0.83),6px_0px_15px_rgb(5,247,247)]"
             />
           </div>

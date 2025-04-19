@@ -77,7 +77,6 @@ function Seleqtione() {
           onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           className={Styles.mySwiper}
           navigation={false}
-          //   module={[Navigation]}
           breakpoints={{
             320: { slidesPerView: 1.9 },
             640: { slidesPerView: 1.5 },
