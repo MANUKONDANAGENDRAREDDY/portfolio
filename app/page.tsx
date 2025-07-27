@@ -108,17 +108,21 @@ export default function page() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const sr = ScrollReveal({
-        distance: "500px",
-        duration: 1500,
-        delay: 400,
-        reset: true,
-      });
+      import("scrollreveal").then((ScrollRevealModule) => {
+        const ScrollReveal = ScrollRevealModule.default;
 
-      sr.reveal(".reveal", { origin: "bottom" });
-      sr.reveal(".reveal-left", { origin: "left" });
-      sr.reveal(".reveal-right", { origin: "right" });
-      sr.reveal(".reveal-top", { origin: "top" });
+        const sr = ScrollReveal({
+          distance: "500px",
+          duration: 1500,
+          delay: 400,
+          reset: true,
+        });
+
+        sr.reveal(".reveal", { origin: "bottom" });
+        sr.reveal(".reveal-left", { origin: "left" });
+        sr.reveal(".reveal-right", { origin: "right" });
+        sr.reveal(".reveal-top", { origin: "top" });
+      });
     }
   }, []);
 
@@ -280,7 +284,7 @@ export default function page() {
             </div>
 
             <a
-              href="/images/Nagendra-Frontend developer-resume.pdf"
+              href="/images/RESUME_NAGENDRA.pdf"
               download
               target="_blank"
               rel="noopener noreferrer"
@@ -292,7 +296,7 @@ export default function page() {
 
           <div className="hidden md:block reveal-top">
             <Image
-              src="/images/RESUME_NAGENDRA.pdf"
+              src="/images/nagendra.img.png"
               alt="Profile"
               width={400}
               height={300}
