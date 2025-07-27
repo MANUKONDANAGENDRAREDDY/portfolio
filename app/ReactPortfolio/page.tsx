@@ -292,7 +292,7 @@ export default function page() {
 
           <div className="hidden md:block reveal-top">
             <Image
-              src="/images/nagendra.img.png"
+              src="/images/RESUME_NAGENDRA.pdf"
               alt="Profile"
               width={400}
               height={300}
