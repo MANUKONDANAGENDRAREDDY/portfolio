@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import styles from "./pages.model.css";
 
-function page2() {
+function Page2() {
   const [activeIndex, setActiveIndex] = useState(2);
   const swiperRef = useRef(null);
 
@@ -188,4 +188,4 @@ function page2() {
   );
 }
 
-export default page2;
+export default Page2;

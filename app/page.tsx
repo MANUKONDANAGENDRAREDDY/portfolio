@@ -198,13 +198,13 @@ export default function page() {
               <span>NAGENDRA REDDY MANUKONDA</span>
             </h1>
             <h3 className="text-xl md:text-2xl reveal-left dark:text-white text-black">
-              And I'm a{" "}
+              And I&rsquo;m a{" "}
               <span className="text-green-600 ">Frontend Developer</span>
             </h3>
             <p className="text-gray-600 text-xl reveal-left">
-              I&apos;m seeking a challenging software development role where I
+              I&rsquo;m seeking a challenging software development role where I
               can leverage my skills to contribute to innovative projects.
-              I&apos;m eager to join a dynamic team and utilize my technical
+              I&rsquo;m eager to join a dynamic team and utilize my technical
               expertise to develop high-quality software solutions. My goal is
               to contribute to technological advancements and drive positive
               outcomes in the field.

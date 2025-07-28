@@ -52,7 +52,7 @@ const menuItems = [
   },
 ];
 
-function page1() {
+function Page1() {
   const [hoveredPair, setHoveredPair] = useState(null);
 
   const handleMouseEnter = (id) => {
@@ -129,7 +129,7 @@ function page1() {
   );
 }
 
-export default page1;
+export default Page1;
 
 // "use client";
 // import React from "react";

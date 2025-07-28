@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import styles from "./Page.module.css";
 
-function page1() {
+function Page1() {
   const [activeIndex, setActiveIndex] = useState(2);
   const swiperRef = useRef(null);
 
@@ -159,7 +159,7 @@ function page1() {
   );
 }
 
-export default page1;
+export default Page1;
 
 // import { useRef, useState } from "react";
 // import { Swiper, SwiperSlide } from "swiper/react";
